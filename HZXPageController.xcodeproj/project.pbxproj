@@ -194,6 +194,7 @@
 		D61B4F301FBAFF0E000F3570 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HZX;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = hezixuan;
 				TargetAttributes = {
