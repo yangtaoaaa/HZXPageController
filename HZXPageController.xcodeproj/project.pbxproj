@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D61B4F3D1FBAFF0E000F3570 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F3C1FBAFF0E000F3570 /* AppDelegate.m */; };
-		D61B4F401FBAFF0E000F3570 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F3F1FBAFF0E000F3570 /* ViewController.m */; };
+		D61B4F3D1FBAFF0E000F3570 /* HZXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F3C1FBAFF0E000F3570 /* HZXAppDelegate.m */; };
+		D61B4F401FBAFF0E000F3570 /* HZXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F3F1FBAFF0E000F3570 /* HZXViewController.m */; };
 		D61B4F431FBAFF0E000F3570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61B4F411FBAFF0E000F3570 /* Main.storyboard */; };
 		D61B4F451FBAFF0E000F3570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D61B4F441FBAFF0E000F3570 /* Assets.xcassets */; };
 		D61B4F481FBAFF0E000F3570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61B4F461FBAFF0E000F3570 /* LaunchScreen.storyboard */; };
@@ -36,10 +36,10 @@
 
 /* Begin PBXFileReference section */
 		D61B4F381FBAFF0E000F3570 /* HZXPageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZXPageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D61B4F3B1FBAFF0E000F3570 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D61B4F3C1FBAFF0E000F3570 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D61B4F3E1FBAFF0E000F3570 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D61B4F3F1FBAFF0E000F3570 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D61B4F3B1FBAFF0E000F3570 /* HZXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXAppDelegate.h; sourceTree = "<group>"; };
+		D61B4F3C1FBAFF0E000F3570 /* HZXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXAppDelegate.m; sourceTree = "<group>"; };
+		D61B4F3E1FBAFF0E000F3570 /* HZXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXViewController.h; sourceTree = "<group>"; };
+		D61B4F3F1FBAFF0E000F3570 /* HZXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXViewController.m; sourceTree = "<group>"; };
 		D61B4F421FBAFF0E000F3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D61B4F441FBAFF0E000F3570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D61B4F471FBAFF0E000F3570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,7 @@
 		D61B4F5B1FBAFF0F000F3570 /* HZXPageControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZXPageControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61B4F5F1FBAFF0F000F3570 /* HZXPageControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXPageControllerUITests.m; sourceTree = "<group>"; };
 		D61B4F611FBAFF0F000F3570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D61B4F6F1FBB170D000F3570 /* HZXPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +102,12 @@
 		D61B4F3A1FBAFF0E000F3570 /* HZXPageController */ = {
 			isa = PBXGroup;
 			children = (
-				D61B4F3B1FBAFF0E000F3570 /* AppDelegate.h */,
-				D61B4F3C1FBAFF0E000F3570 /* AppDelegate.m */,
-				D61B4F3E1FBAFF0E000F3570 /* ViewController.h */,
-				D61B4F3F1FBAFF0E000F3570 /* ViewController.m */,
-				D61B4F411FBAFF0E000F3570 /* Main.storyboard */,
-				D61B4F441FBAFF0E000F3570 /* Assets.xcassets */,
-				D61B4F461FBAFF0E000F3570 /* LaunchScreen.storyboard */,
-				D61B4F491FBAFF0E000F3570 /* Info.plist */,
-				D61B4F4A1FBAFF0E000F3570 /* main.m */,
+				D61B4F3B1FBAFF0E000F3570 /* HZXAppDelegate.h */,
+				D61B4F3C1FBAFF0E000F3570 /* HZXAppDelegate.m */,
+				D61B4F3E1FBAFF0E000F3570 /* HZXViewController.h */,
+				D61B4F3F1FBAFF0E000F3570 /* HZXViewController.m */,
+				D61B4F6E1FBB1637000F3570 /* Classes */,
+				D61B4F6D1FBB162B000F3570 /* Supporting Files */,
 			);
 			path = HZXPageController;
 			sourceTree = "<group>";
@@ -130,6 +128,26 @@
 				D61B4F611FBAFF0F000F3570 /* Info.plist */,
 			);
 			path = HZXPageControllerUITests;
+			sourceTree = "<group>";
+		};
+		D61B4F6D1FBB162B000F3570 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D61B4F4A1FBAFF0E000F3570 /* main.m */,
+				D61B4F6F1FBB170D000F3570 /* HZXPrefixHeader.pch */,
+				D61B4F491FBAFF0E000F3570 /* Info.plist */,
+				D61B4F411FBAFF0E000F3570 /* Main.storyboard */,
+				D61B4F461FBAFF0E000F3570 /* LaunchScreen.storyboard */,
+				D61B4F441FBAFF0E000F3570 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D61B4F6E1FBB1637000F3570 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D61B4F401FBAFF0E000F3570 /* ViewController.m in Sources */,
+				D61B4F401FBAFF0E000F3570 /* HZXViewController.m in Sources */,
 				D61B4F4B1FBAFF0E000F3570 /* main.m in Sources */,
-				D61B4F3D1FBAFF0E000F3570 /* AppDelegate.m in Sources */,
+				D61B4F3D1FBAFF0E000F3570 /* HZXAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +451,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYHF3XFZT5;
-				INFOPLIST_FILE = HZXPageController/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HZXPageController/Supporting Files/HZXPrefixHeader.pch";
+				INFOPLIST_FILE = "HZXPageController/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yushi.HZXPageController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,7 +467,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYHF3XFZT5;
-				INFOPLIST_FILE = HZXPageController/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HZXPageController/Supporting Files/HZXPrefixHeader.pch";
+				INFOPLIST_FILE = "HZXPageController/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yushi.HZXPageController;
 				PRODUCT_NAME = "$(TARGET_NAME)";

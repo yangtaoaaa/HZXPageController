@@ -6,17 +6,21 @@
 //  Copyright © 2017年 hezixuan. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "HZXAppDelegate.h"
+#import "HZXViewController.h"
 
-@interface AppDelegate ()
+@interface HZXAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation HZXAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[HZXViewController alloc] init];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

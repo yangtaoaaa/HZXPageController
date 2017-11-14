@@ -1,0 +1,13 @@
+//
+//  HZXPreHeader.pch
+//  HZXPageController
+//
+//  Created by hezixuan on 2017/11/14.
+//  Copyright © 2017年 hezixuan. All rights reserved.
+//
+
+#define LogD(fmt, ...) DDLogDebug((@"%s:%d " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LogI(fmt, ...) DDLogInfo((@"%s:%d " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LogE(fmt, ...) DDLogError((@"%s:%d " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+#define TR(a) ((a) * ((SCREEN_WIDTH <= 320.0f) ? 0.853f : 1.0f))
