@@ -21,6 +21,7 @@
     self.title = @"PageController";
     self.titleArr = [NSArray arrayWithObjects:@"带普通导航栏的置顶滑动控件", @"不带导航栏的置顶滑动控件", @"变化导航栏的置顶滑动控件", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12" @"13", @"14", @"15", @"16", @"17", @"18", @"19", nil];
     self.view.backgroundColor = [UIColor whiteColor];
+    
     // tableView
     self.tableView.frame = self.view.frame;
     self.tableView.backgroundColor = [UIColor whiteColor];
