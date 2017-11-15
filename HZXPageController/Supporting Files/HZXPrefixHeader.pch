@@ -6,8 +6,60 @@
 //  Copyright © 2017年 hezixuan. All rights reserved.
 //
 
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIBarButtonItem+YZ.h"
+#import "UIView+SZ.h"
+#import "UIImage+YZ.h"
+#import "NSString+YZ.h"
+#import "RXMD5.h"
+#import "RXHttpTool.h"
+#import "RXGeneSign.h"
+#import "RXUserDefaultTool.h"
+
+
 #define LogD(fmt, ...) DDLogDebug((@"%s:%d " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define LogI(fmt, ...) DDLogInfo((@"%s:%d " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define LogE(fmt, ...) DDLogError((@"%s:%d " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 #define TR(a) ((a) * ((SCREEN_WIDTH <= 320.0f) ? 0.853f : 1.0f))
+#define screenWidth   ([UIScreen mainScreen].bounds.size.width)
+#define screenHeight  ([UIScreen mainScreen].bounds.size.height)
+#define slideWidth (((screenWidth) / 4) * 3)
+#define IS_IPHONE_4S screenHeight < 568.0
+#define IS_IPHONE_5  screenHeight == 568
+
+// 自定义RGB颜色
+#define HZXColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+// 是否为4inch
+#define iPhone4s ([UIScreen mainScreen].bounds.size.height < 568)
+#define iPhone5s ([UIScreen mainScreen].bounds.size.height == 568)
+#define KEY_WINDOW  [[UIApplication sharedApplication] keyWindow]
+#define iOS8 ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
+#define iOS7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
+#define iOS6 ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+//测试颜色
+#define testColor ([UIColor colorWithRed:0 green:225 blue:0 alpha:0.5])
+//statuBar的高度
+#define statusBarH 20
+//#define statusBarH  [UIApplication sharedApplication].statusBarFrame.size.height
+//navigationBar的高度
+#define navBarH 44
+//#define navBarH  self.navigationController.navigationBar.frame.size.height
+//tabBar的高度
+#define tabBarH 49
+//self.tabBarController.tabBar.frame.size.height
+//常用的淡橙色背景
+#define orangeBackgroundColor HZXColor(255, 254, 241, 1.0)
+#define appid id462532069
+//自定义Log
+#ifdef DEBUG
+#define HZXLog(...) NSLog(__VA_ARGS__)
+#else
+#define HZXLog(...)
+#endif
+
+
+#endif
+
