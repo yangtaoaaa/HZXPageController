@@ -13,6 +13,8 @@
 		D61B4F4B1FBAFF0E000F3570 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F4A1FBAFF0E000F3570 /* main.m */; };
 		D61B4F551FBAFF0F000F3570 /* HZXPageControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F541FBAFF0F000F3570 /* HZXPageControllerTests.m */; };
 		D61B4F601FBAFF0F000F3570 /* HZXPageControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F5F1FBAFF0F000F3570 /* HZXPageControllerUITests.m */; };
+		D6C4B5341FBDE09200C06532 /* HZXNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */; };
+		D6C4B5371FBDE57A00C06532 /* HZXSubTitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4B5361FBDE57A00C06532 /* HZXSubTitleScrollView.m */; };
 		D6DDD3411FBC09BB003789FF /* NSArray+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DDD2131FBC09BA003789FF /* NSArray+YZ.m */; };
 		D6DDD3421FBC09BB003789FF /* NSDictionary+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DDD2151FBC09BA003789FF /* NSDictionary+YZ.m */; };
 		D6DDD3431FBC09BB003789FF /* NSAttributedString+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DDD2181FBC09BA003789FF /* NSAttributedString+YZ.m */; };
@@ -173,6 +175,10 @@
 		D61B4F5F1FBAFF0F000F3570 /* HZXPageControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXPageControllerUITests.m; sourceTree = "<group>"; };
 		D61B4F611FBAFF0F000F3570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D61B4F6F1FBB170D000F3570 /* HZXPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXPrefixHeader.pch; sourceTree = "<group>"; };
+		D6C4B5321FBDE09200C06532 /* HZXNormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZXNormalViewController.h; sourceTree = "<group>"; };
+		D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZXNormalViewController.m; sourceTree = "<group>"; };
+		D6C4B5351FBDE57A00C06532 /* HZXSubTitleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZXSubTitleScrollView.h; sourceTree = "<group>"; };
+		D6C4B5361FBDE57A00C06532 /* HZXSubTitleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZXSubTitleScrollView.m; sourceTree = "<group>"; };
 		D6DDD2121FBC09BA003789FF /* NSArray+YZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YZ.h"; sourceTree = "<group>"; };
 		D6DDD2131FBC09BA003789FF /* NSArray+YZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YZ.m"; sourceTree = "<group>"; };
 		D6DDD2141FBC09BA003789FF /* NSDictionary+YZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YZ.h"; sourceTree = "<group>"; };
@@ -533,9 +539,37 @@
 		D61B4F6E1FBB1637000F3570 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D6C4B5311FBDE01A00C06532 /* Controller */,
+				D6C4B5301FBDE01200C06532 /* View */,
+				D6C4B52F1FBDE00A00C06532 /* Model */,
 				D6DDD20D1FBC09BA003789FF /* Others */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		D6C4B52F1FBDE00A00C06532 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6C4B5301FBDE01200C06532 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4B5351FBDE57A00C06532 /* HZXSubTitleScrollView.h */,
+				D6C4B5361FBDE57A00C06532 /* HZXSubTitleScrollView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6C4B5311FBDE01A00C06532 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4B5321FBDE09200C06532 /* HZXNormalViewController.h */,
+				D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D6DDD20D1FBC09BA003789FF /* Others */ = {
@@ -1265,6 +1299,7 @@
 				D6DDD3881FBC09BB003789FF /* MKAnnotationView+WebCache.m in Sources */,
 				D6DDD3771FBC09BB003789FF /* POPCGUtils.mm in Sources */,
 				D6DDD36A1FBC09BB003789FF /* MJRefreshFooterView.m in Sources */,
+				D6C4B5371FBDE57A00C06532 /* HZXSubTitleScrollView.m in Sources */,
 				D6DDD3961FBC09BB003789FF /* UIImageView+WebCache.m in Sources */,
 				D6DDD3471FBC09BB003789FF /* UIColor+YZ.m in Sources */,
 				D6DDD3461FBC09BB003789FF /* UIBarButtonItem+YZ.m in Sources */,
@@ -1318,6 +1353,7 @@
 				D6DDD3811FBC09BB003789FF /* TAAbstractDotView.m in Sources */,
 				D6DDD3A91FBC09BB003789FF /* ZBMessageManagerFaceView.m in Sources */,
 				D6DDD3681FBC09BB003789FF /* MJRefreshBaseView.m in Sources */,
+				D6C4B5341FBDE09200C06532 /* HZXNormalViewController.m in Sources */,
 				D6DDD38A1FBC09BB003789FF /* SDImageCache.m in Sources */,
 				D6DDD36B1FBC09BB003789FF /* MJRefreshHeaderView.m in Sources */,
 				D6DDD3761FBC09BB003789FF /* POPBasicAnimation.mm in Sources */,

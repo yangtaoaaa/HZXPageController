@@ -1,52 +1,68 @@
 //
-//  ViewController.m
+//  HZXNormalViewController.m
 //  HZXPageController
 //
-//  Created by hezixuan on 2017/11/14.
+//  Created by 何紫璇 on 2017/11/16.
 //  Copyright © 2017年 hezixuan. All rights reserved.
 //
 
-#import "HZXViewController.h"
 #import "HZXNormalViewController.h"
 
-@interface HZXViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HZXNormalViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *titleArr;
-@property (nonatomic, strong) NSArray *ctrlArr;
 
 @end
 
+@implementation HZXNormalViewController
 
-@implementation HZXViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"主页";
-    self.titleArr = [NSArray arrayWithObjects:@"带普通导航栏的置顶滑动控件", @"不带导航栏的置顶滑动控件", @"变化导航栏的置顶滑动控件", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", nil];
+    self.title = @"普通带导航";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    // tableView
-    self.tableView.frame = self.view.frame;
+    self.titleArr = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", nil];
+    
+    [self setupTableView];
+}
+
+- (void)setupTableView
+{
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+    
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, 180)];
+    headView.backgroundColor = [UIColor redColor];
+    self.tableView.tableHeaderView = headView;
 }
 
 #pragma mark - tableView DataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellId = @"HZXHomeCellId";
+    static NSString *cellId = @"HZXNormalWithNavCellId";
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         UILabel *rowlabel = [[UILabel alloc] init];
         rowlabel.frame = CGRectMake(0, 0, screenWidth, 78);
         rowlabel.font = [UIFont systemFontOfSize:18];
-        rowlabel.backgroundColor = [UIColor greenColor];
+        rowlabel.backgroundColor = [UIColor whiteColor];
         rowlabel.text = self.titleArr[indexPath.row];
         rowlabel.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:rowlabel];
+        
+        // lineView
+        UIView *lineView = [[UIView alloc]init];
+        lineView.frame = CGRectMake(0, 79, screenWidth, 1);
+        lineView.backgroundColor = [UIColor redColor];
+        [cell.contentView addSubview:lineView];
     }
     return cell;
 }
@@ -65,20 +81,8 @@
 #pragma mark - tableView dataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row) {
-        case 0:{
-            HZXNormalViewController *normalVc = [[HZXNormalViewController alloc]init];
-            [self.navigationController pushViewController:normalVc animated:YES];
-            break;
-        }
-        default:
-            break;
-    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
 
 @end
