@@ -30,12 +30,12 @@
 - (void)addScrollView {
     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     //_scrollView.contentSize = CGSizeMake(_titleArrs.count * 50, self.height);
-    _scrollView.pagingEnabled = YES;
+    _scrollView.pagingEnabled = NO;
     _scrollView.bounces = NO;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.delegate = self;
-    _scrollView.backgroundColor = [UIColor greenColor];
+    _scrollView.backgroundColor = [UIColor purpleColor];
     [self addSubview:_scrollView];
 }
 
