@@ -7,9 +7,11 @@
 //
 
 #import "HZXViewController.h"
+#import "HZXTitleScrollView.h"
 #import "HZXNormalViewController.h"
 
-@interface HZXViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@interface HZXViewController ()
 @property (nonatomic, strong) NSArray *titleArr;
 @property (nonatomic, strong) NSArray *ctrlArr;
 
@@ -21,60 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"主页";
-    self.titleArr = [NSArray arrayWithObjects:@"带普通导航栏的置顶滑动控件", @"不带导航栏的置顶滑动控件", @"变化导航栏的置顶滑动控件", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", nil];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    NSArray *titlesArr = [NSArray arrayWithObjects:@"推荐", @"新品", @"限时购", @"居家", @"餐厨", @"配件", @"服装", @"电器", @"洗护", @"杂货", @"饮食", nil];
+    HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, kStatusAndNavH, screenWidth, 50) titlesArr:titlesArr];
+    [self.view addSubview:titleScrollView];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    // tableView
-    self.tableView.frame = self.view.frame;
-    self.tableView.backgroundColor = [UIColor whiteColor];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
 }
 
-#pragma mark - tableView DataSource
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellId = @"HZXHomeCellId";
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        UILabel *rowlabel = [[UILabel alloc] init];
-        rowlabel.frame = CGRectMake(0, 0, screenWidth, 78);
-        rowlabel.font = [UIFont systemFontOfSize:18];
-        rowlabel.backgroundColor = [UIColor greenColor];
-        rowlabel.text = self.titleArr[indexPath.row];
-        rowlabel.textAlignment = NSTextAlignmentCenter;
-        [cell.contentView addSubview:rowlabel];
-    }
-    return cell;
-}
 
-#pragma mark - tableView delegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.titleArr.count;
-}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 80.0;
-}
 
-#pragma mark - tableView dataSource
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    switch (indexPath.row) {
-        case 0:{
-            HZXNormalViewController *normalVc = [[HZXNormalViewController alloc]init];
-            [self.navigationController pushViewController:normalVc animated:YES];
-            break;
-        }
-        default:
-            break;
-    }
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

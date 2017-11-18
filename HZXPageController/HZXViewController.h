@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HZXViewController : UITableViewController
+@interface HZXViewController : UIViewController
 
 
 @end

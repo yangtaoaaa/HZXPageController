@@ -27,14 +27,30 @@
 #define screenWidth   ([UIScreen mainScreen].bounds.size.width)
 #define screenHeight  ([UIScreen mainScreen].bounds.size.height)
 #define slideWidth (((screenWidth) / 4) * 3)
-#define IS_IPHONE_4S screenHeight < 568.0
-#define IS_IPHONE_5  screenHeight == 568
+#define iPhone4S (screenHeight < 568.0)
+#define iPhone5  (screenHeight == 568)
+#define iPhone6  (screenHeight == 667)
+#define iPhone6Plus  (screenHeight == 736)
+#define iPhoneX  (screenHeight == 812)
+
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_WIDTH  ([[UIScreen mainScreen] bounds].size.width)
+
+
+#define ISIPHONEX      (SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812)
+#define ISIPHONE6_PLUS (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
+#define ISIPHONE6      (SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 667)
+#define ISIPHONE5      (SCREEN_WIDTH == 320 && SCREEN_HEIGHT == 568)
+#define ISIPHONE4      (SCREEN_WIDTH == 320 && SCREEN_HEIGHT == 480)
+
+#define statusBarHeight (ISIPHONEX ? 44 : 20)
+#define tabBarHeight (ISIPHONEX ? 83 : 49)
+#define statusAndNavHeight (ISIPHONEX ? 88 : 64)
+#define iPhoneXHomeHeight 34
 
 // 自定义RGB颜色
 #define HZXColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-// 是否为4inch
-#define iPhone4s ([UIScreen mainScreen].bounds.size.height < 568)
-#define iPhone5s ([UIScreen mainScreen].bounds.size.height == 568)
+
 #define KEY_WINDOW  [[UIApplication sharedApplication] keyWindow]
 #define iOS8 ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
 #define iOS7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
@@ -42,14 +58,12 @@
 //测试颜色
 #define testColor ([UIColor colorWithRed:0 green:225 blue:0 alpha:0.5])
 //statuBar的高度
-#define statusBarH 20
-//#define statusBarH  [UIApplication sharedApplication].statusBarFrame.size.height
+#define kStatusBarH ((iPhoneX) ? (44) : (20))
 //navigationBar的高度
-#define navBarH 44
-//#define navBarH  self.navigationController.navigationBar.frame.size.height
+#define kNavBarH 44
+#define kStatusAndNavH ((iPhoneX) ? (88) : (64))
 //tabBar的高度
-#define tabBarH 49
-//self.tabBarController.tabBar.frame.size.height
+#define kTabBarH ((iPhoneX) ? (83) : (49))
 //常用的淡橙色背景
 #define orangeBackgroundColor HZXColor(255, 254, 241, 1.0)
 #define appid id462532069

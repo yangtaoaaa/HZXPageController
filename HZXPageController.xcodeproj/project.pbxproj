@@ -13,6 +13,7 @@
 		D61B4F4B1FBAFF0E000F3570 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F4A1FBAFF0E000F3570 /* main.m */; };
 		D61B4F551FBAFF0F000F3570 /* HZXPageControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F541FBAFF0F000F3570 /* HZXPageControllerTests.m */; };
 		D61B4F601FBAFF0F000F3570 /* HZXPageControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F5F1FBAFF0F000F3570 /* HZXPageControllerUITests.m */; };
+		D67799721FC0596E00403D64 /* HZXTitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67799711FC0596E00403D64 /* HZXTitleScrollView.m */; };
 		D6C4B5341FBDE09200C06532 /* HZXNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */; };
 		D6C4B5371FBDE57A00C06532 /* HZXSubTitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4B5361FBDE57A00C06532 /* HZXSubTitleScrollView.m */; };
 		D6DDD3411FBC09BB003789FF /* NSArray+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DDD2131FBC09BA003789FF /* NSArray+YZ.m */; };
@@ -175,6 +176,8 @@
 		D61B4F5F1FBAFF0F000F3570 /* HZXPageControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXPageControllerUITests.m; sourceTree = "<group>"; };
 		D61B4F611FBAFF0F000F3570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D61B4F6F1FBB170D000F3570 /* HZXPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXPrefixHeader.pch; sourceTree = "<group>"; };
+		D67799701FC0596E00403D64 /* HZXTitleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXTitleScrollView.h; sourceTree = "<group>"; };
+		D67799711FC0596E00403D64 /* HZXTitleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXTitleScrollView.m; sourceTree = "<group>"; };
 		D6C4B5321FBDE09200C06532 /* HZXNormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZXNormalViewController.h; sourceTree = "<group>"; };
 		D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZXNormalViewController.m; sourceTree = "<group>"; };
 		D6C4B5351FBDE57A00C06532 /* HZXSubTitleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZXSubTitleScrollView.h; sourceTree = "<group>"; };
@@ -559,6 +562,8 @@
 			children = (
 				D6C4B5351FBDE57A00C06532 /* HZXSubTitleScrollView.h */,
 				D6C4B5361FBDE57A00C06532 /* HZXSubTitleScrollView.m */,
+				D67799701FC0596E00403D64 /* HZXTitleScrollView.h */,
+				D67799711FC0596E00403D64 /* HZXTitleScrollView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1329,6 +1334,7 @@
 				D6DDD3611FBC09BB003789FF /* MJMethod.m in Sources */,
 				D6DDD37A1FBC09BB003789FF /* POPGeometry.mm in Sources */,
 				D6DDD3491FBC09BB003789FF /* UIView+SZ.m in Sources */,
+				D67799721FC0596E00403D64 /* HZXTitleScrollView.m in Sources */,
 				D6DDD37F1FBC09BB003789FF /* POPVector.mm in Sources */,
 				D6DDD3551FBC09BB003789FF /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D6DDD3931FBC09BB003789FF /* UIImage+MultiFormat.m in Sources */,
