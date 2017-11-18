@@ -28,7 +28,7 @@
     NSArray *titlesArr = [NSArray arrayWithObjects:@"推荐", @"新品", @"限时购", @"居家", @"餐厨", @"配件", @"服装", @"电器", @"洗护", @"杂货", @"饮食", nil];
     // 下面的大scrollView
     HZXHomeScrollView *homeScrollView = [[HZXHomeScrollView alloc]initWithFrame:CGRectMake(0, statusBarHeight, screenWidth, self.view.height - statusBarHeight)titlesCount:titlesArr.count];
-    homeScrollView.delegate = self;
+    homeScrollView.homeScrollViewelegate = self;
     [self.view addSubview:homeScrollView];
     int index = 0;
     // 子控制器
@@ -44,8 +44,8 @@
     }
     
     // 标题
-    HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, kStatusAndNavH, screenWidth, 50) titlesArr:titlesArr];
-    [self.view addSubview:titleScrollView];
+//    HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, kStatusAndNavH, screenWidth, 50) titlesArr:titlesArr];
+//    [self.view addSubview:titleScrollView];
     
 }
 

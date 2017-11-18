@@ -19,24 +19,22 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addScrollView:titlesCount];
+        self.frame = frame;
+        self.backgroundColor = [UIColor greenColor];
+        self.showsHorizontalScrollIndicator = YES;
+        self.showsVerticalScrollIndicator = NO;
+        self.pagingEnabled = YES;
+        self.bounces = NO;
+        self.delegate = self;
+        self.contentSize = CGSizeMake(self.width * titlesCount, 0);
     }
     return self;
 }
 
-- (void)addScrollView:(NSInteger)titleCount{
-    self.pagingEnabled = YES;
-    self.bounces = NO;
-    self.showsHorizontalScrollIndicator = NO;
-    self.showsVerticalScrollIndicator = NO;
-    self.backgroundColor = [UIColor greenColor];
-    self.delegate = self;
-    self.contentSize = CGSizeMake(self.width * titleCount, 0);
-}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    HZXLog(@"dd");
+//    HZXLog(@"dd");
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
