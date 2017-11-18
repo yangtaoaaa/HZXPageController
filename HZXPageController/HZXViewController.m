@@ -6,6 +6,8 @@
 //  Copyright © 2017年 hezixuan. All rights reserved.
 //
 
+#define kTitleScrollHeight 50
+
 #import "HZXViewController.h"
 #import "HZXHomeScrollView.h"
 #import "HZXTitleScrollView.h"
@@ -27,7 +29,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     NSArray *titlesArr = [NSArray arrayWithObjects:@"推荐", @"新品", @"限时购", @"居家", @"餐厨", @"配件", @"服装", @"电器", @"洗护", @"杂货", @"饮食", nil];
     // 下面的大scrollView
-    HZXHomeScrollView *homeScrollView = [[HZXHomeScrollView alloc]initWithFrame:CGRectMake(0, statusBarHeight, screenWidth, self.view.height - statusBarHeight)titlesCount:titlesArr.count];
+    HZXHomeScrollView *homeScrollView = [[HZXHomeScrollView alloc]initWithFrame:CGRectMake(0, statusAndNavHeight + kTitleScrollHeight , screenWidth, self.view.height - statusAndNavHeight - kTitleScrollHeight)titlesCount:titlesArr.count];
     homeScrollView.homeScrollViewelegate = self;
     [self.view addSubview:homeScrollView];
     int index = 0;
@@ -44,8 +46,8 @@
     }
     
     // 标题
-//    HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, kStatusAndNavH, screenWidth, 50) titlesArr:titlesArr];
-//    [self.view addSubview:titleScrollView];
+    HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, kStatusAndNavH, screenWidth, kTitleScrollHeight) titlesArr:titlesArr];
+    [self.view addSubview:titleScrollView];
     
 }
 

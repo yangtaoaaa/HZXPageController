@@ -32,6 +32,7 @@
 - (void)setupTableView
 {
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView.height -= (statusAndNavHeight + 50);
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
