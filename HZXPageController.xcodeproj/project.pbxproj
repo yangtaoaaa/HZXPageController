@@ -14,6 +14,7 @@
 		D61B4F551FBAFF0F000F3570 /* HZXPageControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F541FBAFF0F000F3570 /* HZXPageControllerTests.m */; };
 		D61B4F601FBAFF0F000F3570 /* HZXPageControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F5F1FBAFF0F000F3570 /* HZXPageControllerUITests.m */; };
 		D630C6911FC07C3D00E28A6E /* HZXHomeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D630C6901FC07C3D00E28A6E /* HZXHomeScrollView.m */; };
+		D630C6941FC3183900E28A6E /* HZXTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D630C6931FC3183900E28A6E /* HZXTestViewController.m */; };
 		D67799721FC0596E00403D64 /* HZXTitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67799711FC0596E00403D64 /* HZXTitleScrollView.m */; };
 		D6C4B5341FBDE09200C06532 /* HZXNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */; };
 		D6C4B5371FBDE57A00C06532 /* HZXSubTitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4B5361FBDE57A00C06532 /* HZXSubTitleScrollView.m */; };
@@ -179,6 +180,8 @@
 		D61B4F6F1FBB170D000F3570 /* HZXPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXPrefixHeader.pch; sourceTree = "<group>"; };
 		D630C68F1FC07C3D00E28A6E /* HZXHomeScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXHomeScrollView.h; sourceTree = "<group>"; };
 		D630C6901FC07C3D00E28A6E /* HZXHomeScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXHomeScrollView.m; sourceTree = "<group>"; };
+		D630C6921FC3183900E28A6E /* HZXTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXTestViewController.h; sourceTree = "<group>"; };
+		D630C6931FC3183900E28A6E /* HZXTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXTestViewController.m; sourceTree = "<group>"; };
 		D67799701FC0596E00403D64 /* HZXTitleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXTitleScrollView.h; sourceTree = "<group>"; };
 		D67799711FC0596E00403D64 /* HZXTitleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXTitleScrollView.m; sourceTree = "<group>"; };
 		D6C4B5321FBDE09200C06532 /* HZXNormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZXNormalViewController.h; sourceTree = "<group>"; };
@@ -578,6 +581,8 @@
 			children = (
 				D6C4B5321FBDE09200C06532 /* HZXNormalViewController.h */,
 				D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */,
+				D630C6921FC3183900E28A6E /* HZXTestViewController.h */,
+				D630C6931FC3183900E28A6E /* HZXTestViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1350,6 +1355,7 @@
 				D6DDD3AE1FBC09BB003789FF /* MLEmojiLabel.m in Sources */,
 				D6DDD39B1FBC09BB003789FF /* TZGifPhotoPreviewController.m in Sources */,
 				D6DDD38D1FBC09BB003789FF /* SDWebImageDownloader.m in Sources */,
+				D630C6941FC3183900E28A6E /* HZXTestViewController.m in Sources */,
 				D6DDD3851FBC09BB003789FF /* SDCollectionViewCell.m in Sources */,
 				D61B4F401FBAFF0E000F3570 /* HZXViewController.m in Sources */,
 				D6DDD3911FBC09BB003789FF /* UIButton+WebCache.m in Sources */,

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HZXPageController/Classes/Controller/HZXNormalViewController.m"
-            timestampString = "532715755.400249"
+            timestampString = "532889554.744983"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-setupTableView"
             landmarkType = "7">
          </BreakpointContent>

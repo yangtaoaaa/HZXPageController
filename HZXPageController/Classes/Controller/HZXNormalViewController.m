@@ -7,6 +7,7 @@
 //
 
 #import "HZXNormalViewController.h"
+#import "HZXTestViewController.h"
 
 @interface HZXNormalViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -82,6 +83,8 @@
 #pragma mark - tableView dataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    HZXTestViewController *testVc = [[HZXTestViewController alloc]init];
+    [self presentViewController:testVc animated:YES completion:nil];
 }
 
 
