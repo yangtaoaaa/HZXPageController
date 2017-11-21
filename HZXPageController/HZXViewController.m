@@ -12,6 +12,7 @@
 #import "HZXHomeScrollView.h"
 #import "HZXTitleScrollView.h"
 #import "HZXNormalViewController.h"
+#import "HZXTestViewController.h"
 
 
 @interface HZXViewController ()<HZXHomeScrollViewDelegate>
@@ -35,14 +36,19 @@
     int index = 0;
     // 子控制器
     for (NSString *titleStr in titlesArr) {
-        HZXNormalViewController *normalVc = [[HZXNormalViewController alloc]init];
-        normalVc.title = titleStr;
-        [self addChildViewController:normalVc];
-        // 先放在这
-        if (index == 0) {
-            [homeScrollView addSubview:normalVc.view];
-            index++;
+        if (index == 1 || index == 3 || index == 5) {
+            HZXTestViewController *testVc = [[HZXTestViewController alloc]init];
+            [self addChildViewController:testVc];
+        } else {
+            HZXNormalViewController *normalVc = [[HZXNormalViewController alloc]init];
+            normalVc.title = titleStr;
+            [self addChildViewController:normalVc];
+            // 先放在这
+            if (index == 0) {
+                [homeScrollView addSubview:normalVc.view];
+            }
         }
+        index++;
     }
     
     // 标题

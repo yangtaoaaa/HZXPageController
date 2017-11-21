@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class HZXSubTitleScrollView;
+
+@protocol PlayScrollViewDelegate <NSObject>
+@optional
+
+@end
+
+
 @interface HZXTitleScrollView : UIView
 
 @property (nonatomic, strong) UIColor *customColor;
