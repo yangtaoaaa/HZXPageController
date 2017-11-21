@@ -10,5 +10,7 @@
 
 @interface HZXTitleScrollView : UIView
 
+@property (nonatomic, strong) UIColor *customColor;
 - (id)initWithFrame:(CGRect)frame titlesArr:(NSArray *)titlesArr;
+
 @end

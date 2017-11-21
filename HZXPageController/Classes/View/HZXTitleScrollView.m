@@ -109,6 +109,11 @@
     [self addSubview:_scrollView];
 }
 
+- (void)setCustomColor:(UIColor *)customColor
+{
+    _scrollView.backgroundColor = customColor;
+}
+
 #pragma mark - lazy
 - (NSMutableArray *)titleButtons
 {

@@ -8,6 +8,7 @@
 
 #import "HZXNormalViewController.h"
 #import "HZXTestViewController.h"
+#import "HZXTitleScrollView.h"
 
 @interface HZXNormalViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -40,9 +41,16 @@
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, 180)];
+    // head
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, 240)];
     headView.backgroundColor = [UIColor redColor];
+    NSArray *titlesArr = [NSArray arrayWithObjects:@"10:00", @"12:00", @"14:00", @"16:00", @"18:00", @"20:00", @"22:00", @"24:00", nil];
     self.tableView.tableHeaderView = headView;
+    // 下面的大scrollView
+    // 标题
+    HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, 200, screenWidth, 40) titlesArr:titlesArr];
+    titleScrollView.customColor = [UIColor lightGrayColor];
+    [headView addSubview:titleScrollView];
 }
 
 #pragma mark - tableView DataSource
