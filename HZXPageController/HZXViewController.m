@@ -15,10 +15,10 @@
 #import "HZXTestViewController.h"
 
 
-@interface HZXViewController ()<HZXHomeScrollViewDelegate>
+@interface HZXViewController ()<HZXHomeScrollViewDelegate, HZXTitleScrollViewDelegate>
 @property (nonatomic, strong) NSArray *titleArr;
 @property (nonatomic, strong) NSArray *ctrlArr;
-
+@property (nonatomic, strong) HZXHomeScrollView *homeScrollView;
 @end
 
 
@@ -32,6 +32,7 @@
     // 下面的大scrollView
     HZXHomeScrollView *homeScrollView = [[HZXHomeScrollView alloc]initWithFrame:CGRectMake(0, statusAndNavHeight + kTitleScrollHeight , screenWidth, self.view.height - statusAndNavHeight - kTitleScrollHeight)titlesCount:titlesArr.count];
     homeScrollView.homeScrollViewelegate = self;
+    self.homeScrollView = homeScrollView;
     [self.view addSubview:homeScrollView];
     int index = 0;
     // 子控制器
@@ -53,6 +54,7 @@
     
     // 标题
     HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, kStatusAndNavH, screenWidth, kTitleScrollHeight) titlesArr:titlesArr];
+    titleScrollView.titleScrollViewDelegate = self;
     [self.view addSubview:titleScrollView];
     
 }
@@ -64,14 +66,24 @@
     UIViewController *willShowChildVc = self.childViewControllers[index];
     
     // 如果控制器的view已经被创建过，就直接返回
-    if (willShowChildVc.isViewLoaded) return;
+//    if (willShowChildVc.isViewLoaded) return;
     
     // 添加子控制器的view到scrollView身上
     willShowChildVc.view.frame = scrollView.bounds;
     [scrollView addSubview:willShowChildVc.view];
 }
 
-
+- (void)didSelectTitleBtn:(HZXTitleScrollView *)titleScrollView index:(NSInteger)index
+{
+    UIViewController *willShowChildVc = self.childViewControllers[index];
+    
+    // 如果控制器的view已经被创建过，就直接返回
+//    if (willShowChildVc.isViewLoaded) return;
+    
+    // 添加子控制器的view到scrollView身上
+    willShowChildVc.view.frame = self.homeScrollView.bounds;
+    [self.homeScrollView addSubview:willShowChildVc.view];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

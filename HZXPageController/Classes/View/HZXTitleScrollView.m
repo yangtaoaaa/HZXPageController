@@ -95,6 +95,9 @@
 //    CGPoint offset = self.scrollView.contentOffset;
 //    offset.x = _scrollView.width * [self.titleButtons indexOfObject:titleButton];
 //    [self.scrollView setContentOffset:offset animated:YES];
+    if (self.titleScrollViewDelegate && [self.titleScrollViewDelegate respondsToSelector:@selector(didSelectTitleBtn:index:)]) {
+        [self.titleScrollViewDelegate didSelectTitleBtn:self index:titleButton.tag];
+    }
 }
 
 - (void)addScrollView {

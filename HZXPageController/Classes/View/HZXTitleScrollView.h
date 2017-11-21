@@ -8,16 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@class HZXSubTitleScrollView;
+@class HZXTitleScrollView;
 
-@protocol PlayScrollViewDelegate <NSObject>
+@protocol HZXTitleScrollViewDelegate <NSObject>
 @optional
+
+- (void)didSelectTitleBtn:(HZXTitleScrollView *)titleScrollView index:(NSInteger)index;
 
 @end
 
 
 @interface HZXTitleScrollView : UIView
 
+@property (nonatomic, weak) id<HZXTitleScrollViewDelegate>titleScrollViewDelegate;
 @property (nonatomic, strong) UIColor *customColor;
 - (id)initWithFrame:(CGRect)frame titlesArr:(NSArray *)titlesArr;
 

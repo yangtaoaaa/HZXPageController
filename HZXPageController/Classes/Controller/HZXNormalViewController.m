@@ -10,7 +10,7 @@
 #import "HZXTestViewController.h"
 #import "HZXTitleScrollView.h"
 
-@interface HZXNormalViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HZXNormalViewController ()<UITableViewDelegate, UITableViewDataSource, HZXTitleScrollViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *titleArr;
@@ -49,6 +49,7 @@
     // 下面的大scrollView
     // 标题
     HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, 200, screenWidth, 40) titlesArr:titlesArr];
+    titleScrollView.titleScrollViewDelegate = self;
     titleScrollView.customColor = [UIColor lightGrayColor];
     [headView addSubview:titleScrollView];
 }
