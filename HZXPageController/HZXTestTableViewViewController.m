@@ -38,20 +38,27 @@
     //头部视图
     UIImageView *headImgView = [[UIImageView alloc]init];
     headImgView.frame = CGRectMake(0, 0, screenWidth, kCycleHeight);
-    headImgView.backgroundColor = [UIColor redColor];
+    headImgView.image = [UIImage imageNamed:@"101"];
     headImgView.contentMode = UIViewContentModeScaleToFill;
     self.headImgView = headImgView;
-    self.tableView.tableHeaderView = headImgView;
+    
+    // backView
+    UIView *back = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, kCycleHeight)];
+    back.backgroundColor = [UIColor redColor];
+    [back addSubview:headImgView];
+    
+    self.tableView.tableHeaderView = back;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    CGFloat newOffsetY = scrollView.contentOffset.y;
-    NSLog(@"移动的值是==%lf", newOffsetY);
-    if (newOffsetY < - kCycleHeight) {
-        self.tableView.tableHeaderView.frame = CGRectMake(0, newOffsetY, screenWidth, kCycleHeight-newOffsetY);
-        self.tableView.backgroundColor = [UIColor greenColor];
-        self.tableView.tableHeaderView.contentMode = UIViewContentModeScaleToFill;
+    CGFloat yOffset = scrollView.contentOffset.y;
+    NSLog(@"移动的值是==%lf", yOffset);
+    if (yOffset < 0) {
+        CGFloat totalOffset = kCycleHeight + ABS(yOffset);
+        CGFloat f = totalOffset / kCycleHeight;
+//        _headImgView.frame = CGRectMake(0, yOffset, screenWidth, kCycleHeight+ABS(yOffset));
+        _headImgView.frame = CGRectMake(- (screenWidth * f - screenWidth) / 2, yOffset, screenWidth * f, totalOffset);
     }
 }
 
@@ -72,7 +79,7 @@
         
         // lineView
         UIView *lineView = [[UIView alloc]init];
-        lineView.frame = CGRectMake(0, 98, screenWidth, 2);
+        lineView.frame = CGRectMake(0, 0, screenWidth, 2);
         lineView.backgroundColor = [UIColor redColor];
         [cell.contentView addSubview:lineView];
     }
