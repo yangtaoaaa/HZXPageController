@@ -9,8 +9,11 @@
 #import "HZXTestTableViewViewController.h"
 #import "HZXTestViewController.h"
 
+#define kCycleHeight 200
+
 @interface HZXTestTableViewViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIImageView *headImgView;
 @end
 
 @implementation HZXTestTableViewViewController
@@ -29,7 +32,27 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-    
+//    self.tableView.y -= kCycleHeight;
+//    self.tableView.height += kCycleHeight;
+//    self.tableView.contentInset = UIEdgeInsetsMake(kCycleHeight, 0, 0, 0);
+    //头部视图
+    UIImageView *headImgView = [[UIImageView alloc]init];
+    headImgView.frame = CGRectMake(0, 0, screenWidth, kCycleHeight);
+    headImgView.backgroundColor = [UIColor redColor];
+    headImgView.contentMode = UIViewContentModeScaleToFill;
+    self.headImgView = headImgView;
+    self.tableView.tableHeaderView = headImgView;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat newOffsetY = scrollView.contentOffset.y;
+    NSLog(@"移动的值是==%lf", newOffsetY);
+    if (newOffsetY < - kCycleHeight) {
+        self.tableView.tableHeaderView.frame = CGRectMake(0, newOffsetY, screenWidth, kCycleHeight-newOffsetY);
+        self.tableView.backgroundColor = [UIColor greenColor];
+        self.tableView.tableHeaderView.contentMode = UIViewContentModeScaleToFill;
+    }
 }
 
 #pragma mark - tableView DataSource
