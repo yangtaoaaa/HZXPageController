@@ -28,7 +28,18 @@
     
     self.titleArr = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", nil];
     
-    [self setupTableView];
+    // 时间对应的scrollView
+    UIScrollView *timeBgScrollView = [[UIScrollView alloc]init];
+    timeBgScrollView.frame = CGRectMake(0, 0, screenWidth, self.view.height - 240);
+    timeBgScrollView.backgroundColor = [UIColor greenColor];
+    timeBgScrollView.showsVerticalScrollIndicator = YES;
+    timeBgScrollView.showsHorizontalScrollIndicator = YES;
+    timeBgScrollView.pagingEnabled = YES;
+    timeBgScrollView.bounces = NO;
+    timeBgScrollView.delegate = self;
+    timeBgScrollView.contentSize = CGSizeMake(self.view.width * self.titleArr.count, timeBgScrollView.height);
+    [self.view addSubview:timeBgScrollView];
+    //[self setupTableView];
 }
 
 - (void)setupTableView
