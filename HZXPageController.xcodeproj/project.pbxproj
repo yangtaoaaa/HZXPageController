@@ -143,6 +143,7 @@
 		D6DDD3BB1FBC09BB003789FF /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DDD33A1FBC09BB003789FF /* XHImageViewer.m */; };
 		D6DDD3BC1FBC09BB003789FF /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DDD33C1FBC09BB003789FF /* XHViewState.m */; };
 		D6DDD3BD1FBC09BB003789FF /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DDD33E1FBC09BB003789FF /* XHZoomingImageView.m */; };
+		D6FBEC071FC7EDD900D1ABE8 /* HZXTestTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FBEC061FC7EDD900D1ABE8 /* HZXTestTableViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -456,6 +457,8 @@
 		D6DDD33C1FBC09BB003789FF /* XHViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewState.m; sourceTree = "<group>"; };
 		D6DDD33D1FBC09BB003789FF /* XHZoomingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHZoomingImageView.h; sourceTree = "<group>"; };
 		D6DDD33E1FBC09BB003789FF /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
+		D6FBEC051FC7EDD900D1ABE8 /* HZXTestTableViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXTestTableViewViewController.h; sourceTree = "<group>"; };
+		D6FBEC061FC7EDD900D1ABE8 /* HZXTestTableViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXTestTableViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,6 +511,8 @@
 			children = (
 				D61B4F3B1FBAFF0E000F3570 /* HZXAppDelegate.h */,
 				D61B4F3C1FBAFF0E000F3570 /* HZXAppDelegate.m */,
+				D6FBEC051FC7EDD900D1ABE8 /* HZXTestTableViewViewController.h */,
+				D6FBEC061FC7EDD900D1ABE8 /* HZXTestTableViewViewController.m */,
 				D61B4F3E1FBAFF0E000F3570 /* HZXViewController.h */,
 				D61B4F3F1FBAFF0E000F3570 /* HZXViewController.m */,
 				D61B4F6E1FBB1637000F3570 /* Classes */,
@@ -550,17 +555,10 @@
 			children = (
 				D6C4B5311FBDE01A00C06532 /* Controller */,
 				D6C4B5301FBDE01200C06532 /* View */,
-				D6C4B52F1FBDE00A00C06532 /* Model */,
+				D6FBEC041FC7AF8E00D1ABE8 /* Model */,
 				D6DDD20D1FBC09BA003789FF /* Others */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		D6C4B52F1FBDE00A00C06532 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D6C4B5301FBDE01200C06532 /* View */ = {
@@ -1142,6 +1140,13 @@
 			path = XHImageViewer;
 			sourceTree = "<group>";
 		};
+		D6FBEC041FC7AF8E00D1ABE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1326,6 +1331,7 @@
 				D6DDD3481FBC09BB003789FF /* UIImage+YZ.m in Sources */,
 				D6DDD3BD1FBC09BB003789FF /* XHZoomingImageView.m in Sources */,
 				D6DDD3521FBC09BB003789FF /* AFAutoPurgingImageCache.m in Sources */,
+				D6FBEC071FC7EDD900D1ABE8 /* HZXTestTableViewViewController.m in Sources */,
 				D6DDD3BA1FBC09BB003789FF /* VerButton.m in Sources */,
 				D6DDD3891FBC09BB003789FF /* NSData+ImageContentType.m in Sources */,
 				D6DDD34F1FBC09BB003789FF /* AFURLRequestSerialization.m in Sources */,
