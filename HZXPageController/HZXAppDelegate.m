@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    UINavigationController *navCtrl = [[UINavigationController alloc]initWithRootViewController:[[HZXTestTableViewViewController alloc] init]];
+    UINavigationController *navCtrl = [[UINavigationController alloc]initWithRootViewController:[[HZXViewController alloc] init]];
     self.window.rootViewController = navCtrl;
     [self.window makeKeyAndVisible];
     return YES;
