@@ -30,17 +30,6 @@
     
     [self setupTableView];
     
-    // 时间对应的scrollView
-    UIScrollView *timeBgScrollView = [[UIScrollView alloc]init];
-    timeBgScrollView.frame = CGRectMake(0, 0, screenWidth, self.view.height - 240);
-    timeBgScrollView.backgroundColor = [UIColor greenColor];
-    timeBgScrollView.showsVerticalScrollIndicator = YES;
-    timeBgScrollView.showsHorizontalScrollIndicator = YES;
-    timeBgScrollView.pagingEnabled = YES;
-    timeBgScrollView.bounces = NO;
-    timeBgScrollView.delegate = self;
-    timeBgScrollView.contentSize = CGSizeMake(self.view.width * self.titleArr.count, timeBgScrollView.height);
-    [self.view addSubview:timeBgScrollView];
 }
 
 - (void)setupTableView
@@ -73,19 +62,30 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        UILabel *rowlabel = [[UILabel alloc] init];
-        rowlabel.frame = CGRectMake(0, 0, screenWidth, 78);
-        rowlabel.font = [UIFont systemFontOfSize:18];
-        rowlabel.backgroundColor = [UIColor whiteColor];
-        rowlabel.text = self.titleArr[indexPath.row];
-        rowlabel.textAlignment = NSTextAlignmentCenter;
-        [cell.contentView addSubview:rowlabel];
-        
-        // lineView
-        UIView *lineView = [[UIView alloc]init];
-        lineView.frame = CGRectMake(0, 79, screenWidth, 1);
-        lineView.backgroundColor = [UIColor redColor];
-        [cell.contentView addSubview:lineView];
+//        UILabel *rowlabel = [[UILabel alloc] init];
+//        rowlabel.frame = CGRectMake(0, 0, screenWidth, 78);
+//        rowlabel.font = [UIFont systemFontOfSize:18];
+//        rowlabel.backgroundColor = [UIColor whiteColor];
+//        rowlabel.text = self.titleArr[indexPath.row];
+//        rowlabel.textAlignment = NSTextAlignmentCenter;
+//        [cell.contentView addSubview:rowlabel];
+//
+//        // lineView
+//        UIView *lineView = [[UIView alloc]init];
+//        lineView.frame = CGRectMake(0, 79, screenWidth, 1);
+//        lineView.backgroundColor = [UIColor redColor];
+//        [cell.contentView addSubview:lineView];
+        // 时间对应的scrollView
+        UIScrollView *timeBgScrollView = [[UIScrollView alloc]init];
+        timeBgScrollView.frame = CGRectMake(0, 0, screenWidth, self.view.height - 400);
+        timeBgScrollView.backgroundColor = [UIColor greenColor];
+        timeBgScrollView.showsVerticalScrollIndicator = YES;
+        timeBgScrollView.showsHorizontalScrollIndicator = YES;
+        timeBgScrollView.pagingEnabled = YES;
+        timeBgScrollView.bounces = NO;
+        timeBgScrollView.delegate = self;
+        timeBgScrollView.contentSize = CGSizeMake(self.view.width * self.titleArr.count, timeBgScrollView.height);
+        [cell.contentView addSubview:timeBgScrollView];
     }
     return cell;
 }
@@ -93,12 +93,12 @@
 #pragma mark - tableView delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.titleArr.count;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80.0;
+    return screenHeight - 240;
 }
 
 #pragma mark - tableView dataSource
