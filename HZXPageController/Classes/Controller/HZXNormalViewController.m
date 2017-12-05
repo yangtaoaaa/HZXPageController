@@ -53,6 +53,20 @@
     titleScrollView.titleScrollViewDelegate = self;
     titleScrollView.customColor = [UIColor lightGrayColor];
     [headView addSubview:titleScrollView];
+    // 测试
+    UIButton *testBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    testBtn.frame = CGRectMake(0, 50, 120, 40);
+    testBtn.backgroundColor = [UIColor whiteColor];
+    [testBtn setTitle:@"测试刷新" forState:UIControlStateNormal];
+    [testBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [testBtn addTarget:self action:@selector(testBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [titleScrollView addSubview:testBtn];
+}
+
+// 测试刷新
+- (void)testBtnClick
+{
+    //
 }
 
 #pragma mark - tableView DataSource
