@@ -38,7 +38,7 @@
     //头部视图
     UIImageView *headImgView = [[UIImageView alloc]init];
     headImgView.frame = CGRectMake(0, 0, screenWidth, kCycleHeight);
-    headImgView.image = [UIImage imageNamed:@"101"];
+    headImgView.image = [UIImage imageNamed:@"111"];
     headImgView.contentMode = UIViewContentModeScaleToFill;
     self.headImgView = headImgView;
     
@@ -48,6 +48,18 @@
     [back addSubview:headImgView];
     
     self.tableView.tableHeaderView = back;
+    
+    // 毛玻璃效果
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:effect];
+    effectView.frame = CGRectMake(TR(14), 60, TR(218), TR(28));
+    UILabel *effectLabel = [[UILabel alloc]init];
+    effectLabel.frame = CGRectMake(0, 0, TR(218), TR(28));
+    effectLabel.text = @"测试测试";
+    effectLabel.textColor = [UIColor redColor];
+    effectLabel.font = [UIFont systemFontOfSize:18];
+    [effectView.contentView addSubview:effectLabel];
+    [self.view addSubview:effectView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
