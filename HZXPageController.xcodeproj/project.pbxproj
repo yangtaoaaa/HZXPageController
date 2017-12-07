@@ -15,6 +15,7 @@
 		D61B4F601FBAFF0F000F3570 /* HZXPageControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D61B4F5F1FBAFF0F000F3570 /* HZXPageControllerUITests.m */; };
 		D630C6911FC07C3D00E28A6E /* HZXHomeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D630C6901FC07C3D00E28A6E /* HZXHomeScrollView.m */; };
 		D630C6941FC3183900E28A6E /* HZXTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D630C6931FC3183900E28A6E /* HZXTestViewController.m */; };
+		D654DC0D1FD6EBD90073A4ED /* HZXRefreshDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D654DC0C1FD6EBD90073A4ED /* HZXRefreshDataViewController.m */; };
 		D67799721FC0596E00403D64 /* HZXTitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67799711FC0596E00403D64 /* HZXTitleScrollView.m */; };
 		D6C4B5341FBDE09200C06532 /* HZXNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */; };
 		D6C4B5371FBDE57A00C06532 /* HZXSubTitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C4B5361FBDE57A00C06532 /* HZXSubTitleScrollView.m */; };
@@ -183,6 +184,8 @@
 		D630C6901FC07C3D00E28A6E /* HZXHomeScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXHomeScrollView.m; sourceTree = "<group>"; };
 		D630C6921FC3183900E28A6E /* HZXTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXTestViewController.h; sourceTree = "<group>"; };
 		D630C6931FC3183900E28A6E /* HZXTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXTestViewController.m; sourceTree = "<group>"; };
+		D654DC0B1FD6EBD90073A4ED /* HZXRefreshDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXRefreshDataViewController.h; sourceTree = "<group>"; };
+		D654DC0C1FD6EBD90073A4ED /* HZXRefreshDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXRefreshDataViewController.m; sourceTree = "<group>"; };
 		D67799701FC0596E00403D64 /* HZXTitleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZXTitleScrollView.h; sourceTree = "<group>"; };
 		D67799711FC0596E00403D64 /* HZXTitleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZXTitleScrollView.m; sourceTree = "<group>"; };
 		D6C4B5321FBDE09200C06532 /* HZXNormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZXNormalViewController.h; sourceTree = "<group>"; };
@@ -579,6 +582,8 @@
 			children = (
 				D6C4B5321FBDE09200C06532 /* HZXNormalViewController.h */,
 				D6C4B5331FBDE09200C06532 /* HZXNormalViewController.m */,
+				D654DC0B1FD6EBD90073A4ED /* HZXRefreshDataViewController.h */,
+				D654DC0C1FD6EBD90073A4ED /* HZXRefreshDataViewController.m */,
 				D630C6921FC3183900E28A6E /* HZXTestViewController.h */,
 				D630C6931FC3183900E28A6E /* HZXTestViewController.m */,
 			);
@@ -1347,6 +1352,7 @@
 				D6DDD36F1FBC09BB003789FF /* POPAnimatableProperty.mm in Sources */,
 				D6DDD3B31FBC09BB003789FF /* RXConst.m in Sources */,
 				D6DDD3821FBC09BB003789FF /* TAAnimatedDotView.m in Sources */,
+				D654DC0D1FD6EBD90073A4ED /* HZXRefreshDataViewController.m in Sources */,
 				D6DDD3711FBC09BB003789FF /* POPAnimationEvent.mm in Sources */,
 				D6DDD3611FBC09BB003789FF /* MJMethod.m in Sources */,
 				D6DDD37A1FBC09BB003789FF /* POPGeometry.mm in Sources */,
@@ -1564,6 +1570,10 @@
 				INFOPLIST_FILE = "HZXPageController/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yushi.HZXPageController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1582,6 +1592,10 @@
 				INFOPLIST_FILE = "HZXPageController/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yushi.HZXPageController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
