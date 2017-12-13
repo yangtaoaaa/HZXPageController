@@ -2,25 +2,4 @@
 <Bucket
    type = "1"
    version = "2.0">
-<<<<<<< HEAD
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HZXPageController/Classes/Controller/HZXNormalViewController.m"
-            timestampString = "533489148.263931"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-setupTableView"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
-=======
->>>>>>> 804f4eec11dcad73a0b6ebb3322b92d98e5b2d8b
 </Bucket>

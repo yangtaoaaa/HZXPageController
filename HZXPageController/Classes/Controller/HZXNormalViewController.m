@@ -9,6 +9,7 @@
 #import "HZXNormalViewController.h"
 #import "HZXTestViewController.h"
 #import "HZXTitleScrollView.h"
+#import "HZXRefreshDataViewController.h"
 
 @interface HZXNormalViewController ()<UITableViewDelegate, UITableViewDataSource, HZXTitleScrollViewDelegate>
 
@@ -60,13 +61,14 @@
     [testBtn setTitle:@"测试刷新" forState:UIControlStateNormal];
     [testBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [testBtn addTarget:self action:@selector(testBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [titleScrollView addSubview:testBtn];
+    [self.view addSubview:testBtn];
 }
 
 // 测试刷新
 - (void)testBtnClick
 {
-    //
+    HZXRefreshDataViewController *refreshVC = [[HZXRefreshDataViewController alloc]init];
+    [self.navigationController pushViewController:refreshVC animated:YES];
 }
 
 #pragma mark - tableView DataSource

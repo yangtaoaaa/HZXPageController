@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIImageView *yxImgView = [[UIImageView alloc]init];
+    yxImgView.frame = CGRectMake(0, 100, 300, 300);
+    yxImgView.image = [UIImage imageNamed:@"yxImage"];
+    [self.view addSubview:yxImgView];
 }
 
 - (void)didReceiveMemoryWarning {
