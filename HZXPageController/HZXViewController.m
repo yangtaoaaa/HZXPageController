@@ -56,7 +56,6 @@
     HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, kStatusAndNavH, screenWidth, kTitleScrollHeight) titlesArr:titlesArr];
     titleScrollView.titleScrollViewDelegate = self;
     [self.view addSubview:titleScrollView];
-    
 }
 
 - (void)scrollViewDidEndDragging:(HZXHomeScrollView *)scrollView
