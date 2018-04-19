@@ -49,6 +49,7 @@
     NSArray *titlesArr = [NSArray arrayWithObjects:@"10:00", @"12:00", @"14:00", @"16:00", @"18:00", @"20:00", @"22:00", @"24:00", nil];
     self.tableView.tableHeaderView = headView;
     // 下面的大scrollView
+    // test
     // 标题
     HZXTitleScrollView *titleScrollView = [[HZXTitleScrollView alloc]initWithFrame:CGRectMake(0, 200, screenWidth, 40) titlesArr:titlesArr];
     titleScrollView.titleScrollViewDelegate = self;
